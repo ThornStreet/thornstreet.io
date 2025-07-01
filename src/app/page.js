@@ -2,10 +2,31 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>{"Thorn Street"}</h1>
+    <div className="min-h-screen flex flex-col">
+      {/* Main content area */}
+      <main className="flex-1 flex items-center justify-center px-8">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-light tracking-tight">
+            Thorn Street
+          </h1>
+          <p className="text-lg mt-4 opacity-70">Coming Soon</p>
+        </div>
       </main>
+
+      {/* Footer */}
+      <footer className="py-8 px-8">
+        <div className="text-center">
+          <p className="opacity-70">
+            Contact:{" "}
+            <a
+              href="mailto:connorjennings@thornstreet.io"
+              className="hover:opacity-80 transition-opacity underline"
+            >
+              connorjennings@thornstreet.io
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
